@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins for a modern feel */
+  background: linear-gradient(135deg, #fef9f8 0%, #f3f4f6 100%); /* Smoother, more defined gradient */
+  background-size: 200% 200%; /* Make background larger than viewport to enable movement */
+  animation: backgroundPulse 15s ease infinite alternate; /* Animation for background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333; /* Default text color */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-container {
+  background: #ffffff;
+  padding: 50px 40px; /* Increased padding for more breathing room */
+  border-radius: 20px; /* Slightly more rounded corners */
+  /* Enhanced box-shadow for a softer, deeper effect */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px; /* Slightly increased max-width */
+  text-align: center;
+  position: relative; /* Needed for potential future pseudo-elements or animations */
+  overflow: hidden; /* Ensures shadows don't bleed unexpectedly */
+}
+
+.home-container h1 {
+  margin-bottom: 30px; /* Increased margin for better separation */
+  font-size: 32px; /* Slightly larger heading */
+  color: #2d2d2d;
+  font-weight: 700; /* Bolder heading */
+  letter-spacing: -0.5px; /* Subtle letter spacing adjustment */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between buttons */
+  margin-top: 20px; /* Increased top margin */
+}
+
+button {
+  padding: 15px; /* Increased padding for larger touch targets */
+  font-size: 17px; /* Slightly larger font size */
+  font-weight: 600; /* Bolder button text */
+  border: none;
+  border-radius: 12px; /* Smoother button corners */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition all properties for smoother effects */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+  position: relative;
+  overflow: hidden; /* For potential hover effects */
+  text-transform: uppercase; /* Uppercase text for a crisp look */
+  letter-spacing: 0.5px; /* Subtle letter spacing */
+}
+
+/* Custom colored buttons */
+button:nth-child(1) {
+  background: linear-gradient(45deg, #f4a261, #e76f51); /* Gradient for a richer look */
+}
+
+button:nth-child(1):hover {
+  background: linear-gradient(45deg, #e76f51, #f4a261); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+button:nth-child(2) {
+  background: linear-gradient(45deg, #2a9d8f, #21867a); /* Gradient */
+}
+
+button:nth-child(2):hover {
+  background: linear-gradient(45deg, #21867a, #2a9d8f); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(45deg, #8ecae6, #219ebc); /* Gradient */
+}
+
+button:nth-child(3):hover {
+  background: linear-gradient(45deg, #219ebc, #8ecae6); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:nth-child(4) {
+  background: linear-gradient(45deg, #ffb703, #fb8500); /* Gradient */
+}
+
+button:nth-child(4):hover {
+  background: linear-gradient(45deg, #fb8500, #ffb703); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

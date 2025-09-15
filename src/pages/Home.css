@@ -1,0 +1,162 @@
+/* Ensure html and body take full viewport dimensions */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbar due to wide slider */
+}
+
+/* Full screen container */
+.homepage-container {
+  position: relative;
+  height: 100vh; /* Takes full viewport height */
+  width: 100vw; /* Takes full viewport width */
+  overflow: hidden; /* Hides any overflowing content from the slider */
+  font-family: "Poppins", sans-serif;
+  display: flex; /* Flexbox for centering the card */
+  justify-content: center; /* Centers card horizontally */
+  align-items: center; /* Centers card vertically */
+}
+
+/* Background slider - The container for all images */
+.background-slider {
+  position: absolute; /* Allows precise positioning */
+  top: 0;
+  left: 0;
+  height: 100%; /* 100% of homepage-container (100vh) */
+  /* Total width for two sets of 4 images (8 images total), each taking 100vw.
+     This means the slider is 8 times the width of the viewport. */
+  width: 800vw;
+  display: flex; /* Arranges slides in a row */
+  animation: continuousScroll 40s linear infinite; /* Applies the continuous scroll animation */
+  z-index: 1; /* Ensures it's behind the overlay and card */
+}
+
+/* Individual slide within the background slider */
+.slide {
+  width: 100vw; /* Each slide takes up one full viewport width */
+  flex-shrink: 0; /* Prevents slides from shrinking below 100vw */
+  background-size: cover; /* Scales the background image to cover the entire slide area */
+  background-position: center; /* Centers the background image within the slide */
+  background-repeat: no-repeat; /* Prevents the image from repeating within a single slide */
+}
+
+/* Images from public/img/ */
+/* Make sure these paths are correct relative to your project's public folder */
+.bike {
+  background-image: url("/img/main.png");
+}
+.car {
+  background-image: url("/img/car.png");
+}
+.van {
+  background-image: url("/img/van.png");
+}
+.main { /* This class is used for the image at /img/bike.png */
+  background-image: url("/img/bike.png");
+}
+
+/* Keyframe animation for continuous scrolling */
+@keyframes continuousScroll {
+  from {
+    transform: translateX(0); /* Start at the initial position */
+  }
+  to {
+    /* Translate by the width of one full set of unique images (4 images * 100vw = 400vw).
+       When it reaches -400vw, the second duplicated set of images is exactly where the first started,
+       creating a seamless loop as the animation resets to 0.
+    */
+    transform: translateX(-400vw);
+  }
+}
+
+/* Background overlay to dull the images */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black to dull images */
+  z-index: 2; /* Between background slider and the card */
+}
+
+/* Card (in center) */
+.card {
+  position: relative; /* Allows z-index to work and keeps it in flow */
+  z-index: 5; /* Ensures the card is on top of everything */
+  /* Removed background and backdrop-filter to remove the box effect */
+  background: none; /* No background */
+  backdrop-filter: none; /* No blur effect */
+  padding: 40px 50px;
+  border-radius: 20px; /* Kept for overall element shape if needed for future styles */
+  text-align: center;
+  box-shadow: none; /* Removed box shadow */
+  color: white;
+  width: 340px;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem; /* Increased font size for better visibility */
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  /* Added text shadow for better contrast against potentially bright image areas */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Logo (kept for consistency, not used in provided JSX) */
+.logo-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  justify-content: space-around; /* Distributes space around items */
+  gap: 20px; /* Space between buttons */
+}
+
+/* General button styling */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers text/icon within button */
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out; /* Smooth transitions on hover */
+  min-width: 120px; /* Ensures consistent button width */
+}
+
+/* Register button specific styling */
+.register {
+  background: #ff7b00; /* Orange background */
+  border: none;
+  color: white;
+}
+
+.register:hover {
+  background: #ff9a3d; /* Lighter orange on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Login button specific styling */
+.login {
+  background: transparent; /* Transparent background */
+  border: 2px solid white; /* White border */
+  color: white;
+}
+
+.login:hover {
+  background: white; /* White background on hover */
+  color: #ff5e62; /* Reddish text on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}

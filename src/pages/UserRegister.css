@@ -1,0 +1,65 @@
+/* General form container */
+form {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+form h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #ed7b09; /* Your vintage brown color */
+  letter-spacing: 1px;
+}
+
+/* Input fields */
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+form input:focus {
+  border: 1px solid #ed7b09;
+  box-shadow: 0px 0px 6px rgba(237, 123, 9, 0.5);
+  outline: none;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #ed7b09;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+form button:hover {
+  background: #d96d07;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form {
+    margin: 30px;
+    padding: 20px;
+  }
+}

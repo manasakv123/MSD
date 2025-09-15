@@ -1,0 +1,17 @@
+.choice-page {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.choice-page h1 {
+  color: #ed7b09;
+  margin-bottom: 20px;
+}
+
+.choice-page a {
+  display: block;
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}

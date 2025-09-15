@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins for a modern feel */
+  /* Updated background to vintage colors */
+  background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%); /* Muted, slightly desaturated vintage tones */
+  background-size: 200% 200%; /* Make background larger than viewport to enable movement */
+  animation: backgroundPulse 15s ease infinite alternate; /* Animation for background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333; /* Default text color */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-container {
+  background: #ffffff;
+  padding: 50px 40px; /* Increased padding for more breathing room */
+  border-radius: 20px; /* Slightly more rounded corners */
+  /* Enhanced box-shadow for a softer, deeper effect */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px; /* Slightly increased max-width */
+  text-align: center;
+  position: relative; /* Needed for potential future pseudo-elements or animations */
+  overflow: hidden; /* Ensures shadows don't bleed unexpectedly */
+}
+
+.home-container h1 {
+  margin-bottom: 30px; /* Increased margin for better separation */
+  font-size: 32px; /* Slightly larger heading */
+  color: #2d2d2d;
+  font-weight: 700; /* Bolder heading */
+  letter-spacing: -0.5px; /* Subtle letter spacing adjustment */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between buttons */
+  margin-top: 20px; /* Increased top margin */
+}
+
+button {
+  padding: 15px; /* Increased padding for larger touch targets */
+  font-size: 17px; /* Slightly larger font size */
+  font-weight: 600; /* Bolder button text */
+  border: none;
+  border-radius: 12px; /* Smoother button corners */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition all properties for smoother effects */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+  position: relative;
+  overflow: hidden; /* For potential hover effects */
+  text-transform: uppercase; /* Uppercase text for a crisp look */
+  letter-spacing: 0.5px; /* Subtle letter spacing */
+}
+
+/* Custom colored buttons */
+button:nth-child(1) {
+  background: linear-gradient(45deg, #f4a261, #e76f51); /* Gradient for a richer look */
+}
+
+button:nth-child(1):hover {
+  background: linear-gradient(45deg, #e76f51, #f4a261); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+button:nth-child(2) {
+  background: linear-gradient(45deg, #2a9d8f, #21867a); /* Gradient */
+}
+
+button:nth-child(2):hover {
+  background: linear-gradient(45deg, #21867a, #2a9d8f); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(45deg, #8ecae6, #219ebc); /* Gradient */
+}
+
+button:nth-child(3):hover {
+  background: linear-gradient(45deg, #219ebc, #8ecae6); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:nth-child(4) {
+  background: linear-gradient(45deg, #ffb703, #fb8500); /* Gradient */
+}
+
+button:nth-child(4):hover {
+  background: linear-gradient(45deg, #fb8500, #ffb703); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Role Selection Styles --- */
+.role-selection {
+  text-align: center;
+  margin-top: 80px;
+  background: #ffffff; /* White background for the card */
+  padding: 50px 40px; /* Increased padding to match home-container */
+  border-radius: 20px; /* More rounded corners */
+  /* Enhanced box-shadow for a softer, deeper effect, matching home-container */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px; /* Consistent max width */
+  position: relative; /* For potential internal positioning */
+  overflow: hidden; /* For proper shadow clipping */
+}
+
+.role-selection h2 {
+  margin-bottom: 35px; /* Increased margin for more breathing room */
+  font-size: 32px; /* Larger heading for prominence */
+  color: #2d2d2d; /* Darker color for strong contrast */
+  font-weight: 700; /* Bolder font weight */
+  letter-spacing: -0.5px; /* Subtle letter spacing adjustment */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+.role-selection .role-buttons-container { /* New class for the buttons container (recommended to add in JSX) */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between buttons for better spacing */
+  margin-top: 25px; /* Adjusted top margin for spacing */
+}
+
+.role-selection button {
+  padding: 10px 30px; /* Made buttons thinner */
+  font-size: 1.2rem; /* Larger font size for impact */
+  font-weight: 600; /* Bolder text */
+  border: none;
+  border-radius: 12px; /* Consistent rounded corners */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger initial shadow */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Increased letter spacing for more impact */
+  position: relative;
+  overflow: hidden; /* For hover effects */
+  background-size: 200% auto; /* For gradient shift on hover */
+  /* Added a subtle outset border for a more defined look */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Specific button styles for role selection (more normal/vibrant colors) */
+.role-selection button:nth-child(1) {
+  background: linear-gradient(45deg, #4CAF50, #45a049); /* Green for User */
+  box-shadow: 0 8px 15px rgba(76, 175, 80, 0.3);
+}
+
+.role-selection button:nth-child(1):hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(76, 175, 80, 0.4);
+}
+
+.role-selection button:nth-child(2) {
+  background: linear-gradient(45deg, #2196F3, #1976D2); /* Blue for Driver */
+  box-shadow: 0 8px 15px rgba(33, 150, 243, 0.3);
+}
+
+.role-selection button:nth-child(2):hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(33, 150, 243, 0.4);
+}
+
+/* Add more specific button styles if there are more roles */
+/* For example, if you had a 'Guest' role, you could add: */
+/* .role-selection button:nth-child(3) {
+  background: linear-gradient(45deg, #f4a261, #e76f51);
+}
+.role-selection button:nth-child(3):hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+} */

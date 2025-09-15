@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins for a modern feel */
+  /* Updated background to vintage colors */
+  background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%); /* Muted, slightly desaturated vintage tones */
+  background-size: 200% 200%; /* Make background larger than viewport to enable movement */
+  animation: backgroundPulse 15s ease infinite alternate; /* Animation for background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333; /* Default text color */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-container {
+  background: #ffffff;
+  padding: 50px 40px; /* Increased padding for more breathing room */
+  border-radius: 20px; /* Slightly more rounded corners */
+  /* Enhanced box-shadow for a softer, deeper effect */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px; /* Slightly increased max-width */
+  text-align: center;
+  position: relative; /* Needed for potential future pseudo-elements or animations */
+  overflow: hidden; /* Ensures shadows don't bleed unexpectedly */
+}
+
+.home-container h1 {
+  margin-bottom: 30px; /* Increased margin for better separation */
+  font-size: 32px; /* Slightly larger heading */
+  color: #2d2d2d;
+  font-weight: 700; /* Bolder heading */
+  letter-spacing: -0.5px; /* Subtle letter spacing adjustment */
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between buttons */
+  margin-top: 20px; /* Increased top margin */
+}
+
+button {
+  padding: 15px; /* Increased padding for larger touch targets */
+  font-size: 17px; /* Slightly larger font size */
+  font-weight: 600; /* Bolder button text */
+  border: none;
+  border-radius: 12px; /* Smoother button corners */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition all properties for smoother effects */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+  position: relative;
+  overflow: hidden; /* For potential hover effects */
+  text-transform: uppercase; /* Uppercase text for a crisp look */
+  letter-spacing: 0.5px; /* Subtle letter spacing */
+}
+
+/* Custom colored buttons */
+button:nth-child(1) {
+  background: linear-gradient(45deg, #f4a261, #e76f51); /* Gradient for a richer look */
+}
+
+button:nth-child(1):hover {
+  background: linear-gradient(45deg, #e76f51, #f4a261); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+button:nth-child(2) {
+  background: linear-gradient(45deg, #2a9d8f, #21867a); /* Gradient */
+}
+
+button:nth-child(2):hover {
+  background: linear-gradient(45deg, #21867a, #2a9d8f); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(45deg, #8ecae6, #219ebc); /* Gradient */
+}
+
+button:nth-child(3):hover {
+  background: linear-gradient(45deg, #219ebc, #8ecae6); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:nth-child(4) {
+  background: linear-gradient(45deg, #ffb703, #fb8500); /* Gradient */
+}
+
+button:nth-child(4):hover {
+  background: linear-gradient(45deg, #fb8500, #ffb703); /* Reverse gradient on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Role Selection Styles --- */
+.role-selection {
+  text-align: center;
+  margin-top: 80px;
+  background: #ffffff; /* White background for the card */
+  padding: 50px 40px; /* Increased padding to match home-container */
+  border-radius: 20px; /* More rounded corners */
+  /* Enhanced box-shadow for a softer, deeper effect, matching home-container */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px; /* Consistent max width */
+  position: relative; /* For potential internal positioning */
+  overflow: hidden; /* For proper shadow clipping */
+}
+
+.role-selection h2 {
+  margin-bottom: 35px; /* Increased margin for more breathing room */
+  font-size: 32px; /* Larger heading for prominence */
+  color: #2d2d2d; /* Darker color for strong contrast */
+  font-weight: 700; /* Bolder font weight */
+  letter-spacing: -0.5px; /* Subtle letter spacing adjustment */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+.role-selection .role-buttons-container { /* New class for the buttons container (recommended to add in JSX) */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between buttons for better spacing */
+  margin-top: 25px; /* Adjusted top margin for spacing */
+}
+
+.role-selection button {
+  padding: 10px 30px; /* Made buttons thinner */
+  font-size: 1.2rem; /* Larger font size for impact */
+  font-weight: 600; /* Bolder text */
+  border: none;
+  border-radius: 12px; /* Consistent rounded corners */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Stronger initial shadow */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Increased letter spacing for more impact */
+  position: relative;
+  overflow: hidden; /* For hover effects */
+  background-size: 200% auto; /* For gradient shift on hover */
+  /* Added a subtle outset border for a more defined look */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Specific button styles for role selection (more normal/vibrant colors) */
+.role-selection button:nth-child(1) {
+  background: linear-gradient(45deg, #4CAF50, #45a049); /* Green for User */
+  box-shadow: 0 8px 15px rgba(76, 175, 80, 0.3);
+}
+
+.role-selection button:nth-child(1):hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(76, 175, 80, 0.4);
+}
+
+.role-selection button:nth-child(2) {
+  background: linear-gradient(45deg, #2196F3, #1976D2); /* Blue for Driver */
+  box-shadow: 0 8px 15px rgba(33, 150, 243, 0.3);
+}
+
+.role-selection button:nth-child(2):hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(33, 150, 243, 0.4);
+}
+
+/* Add more specific button styles if there are more roles */
+/* For example, if you had a 'Guest' role, you could add: */
+/* .role-selection button:nth-child(3) {
+  background: linear-gradient(45deg, #f4a261, #e76f51);
+}
+.role-selection button:nth-child(3):hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+} */
+
+/* --- Form Styles --- */
+/* General form container */
+form {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins for consistency */
+  text-align: center;
+  padding-top: 50px; /* Increased top padding to make space for icons */
+  position: relative; /* Needed for absolute positioning of icons */
+}
+
+/* Form header icons container */
+.form-header-icons {
+  position: absolute;
+  top: 15px; /* Adjust vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between icons */
+  width: 100%; /* Ensure it spans the form width */
+}
+
+/* Individual icon styling */
+.form-header-icon {
+  width: 40px; /* Size of the icons */
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Circular icons */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 2px solid #fff; /* White border */
+}
+
+/* Specific icon images (using inline SVG for better control and no external requests) */
+.auto-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23FFD700' d='M256 96c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32S224 14.3 224 32v32c0 17.7 14.3 32 32 32zm0 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c53 0 96 43 96 96v48h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H480v32c0 17.7-14.3 32-32 32H320c-17.7 0-32-14.3-32-32s14.3-32 32-32h128v-32c0-17.7 14.3-32 32-32h-16c-17.7 0-32-14.3-32-32s14.3-32 32-32H480v-48c0-53-43-96-96-96H256zm0 256c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM128 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM288 320h128c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32v-32c0-17.7 14.3-32 32-32zM48 96c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM176 32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM128 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM128 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM480 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM192 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM160 96h32c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM64 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32zM128 160c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM448 32H320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM384 192h32c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM480 224h-32c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32zM128 256c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c17.7 0 32-14.3 32-32s-14.3-32-32-32H128zM384 256c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-32zM256 192c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32S224 78.3 224 96v64c0 17.7 14.3 32 32 32zM192 192c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7 14.3 32 32 32zM320 192c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7 14.3 32 32 32zM32 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM64 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 320c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM128 192h32c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM448 320c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-32zM32 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM256 448c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM384 448c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM192 448c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM448 96h32c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM384 128h32c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM160 256h32c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM480 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-32zM128 64c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-17.7-14.3-32-32-32zM64 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM256 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32S224-14.3 224 0v32c0 17.7 14.3 32 32 32zM320 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM192 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM384 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM64 64c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-17.7-14.3-32-32-32zM448 64c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-17.7-14.3-32-32-32zM256 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM192 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM384 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM128 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM64 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM448 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32z'/%3E%3Cpath fill='%23000000' d='M448 256c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 256c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM192 256c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM64 256c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM448 352c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 352c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM192 352c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM64 352c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM256 352c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E");
+}
+
+.bike-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3C!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%236C757D' d='M448 192c0-35.3-28.7-64-64-64H176c-35.3 0-64 28.7-64 64V352c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192zM160 384c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16H384c8.8 0 16 7.2 16 16V368c0 8.8-7.2 16-16 16H160zM64 192c0-17.7-14.3-32-32-32S0 174.3 0 192V352c0 17.7 14.3 32 32 32s32-14.3 32-32V192zm544 0c0-17.7-14.3-32-32-32s-32 14.3-32 32V352c0 17.7 14.3 32 32 32s32-14.3 32-32V192zM256 96c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zm0 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c53 0 96 43 96 96v48h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H480v32c0 17.7-14.3 32-32 32H320c-17.7 0-32-14.3-32-32s14.3-32 32-32h128v-32c0-17.7 14.3-32 32-32h-16c-17.7 0-32-14.3-32-32s14.3-32 32-32H480v-48c0-53-43-96-96-96H256zm0 256c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM128 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM288 320h128c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32v-32c0-17.7 14.3-32 32-32zM48 96c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM176 32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM128 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM128 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM480 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM192 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM160 96h32c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32h-32c-17.7 0-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM64 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32zM128 160c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM448 32H320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zM384 192h32c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM480 224h-32c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32zM128 256c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c17.7 0 32-14.3 32-32s-14.3-32-32-32H128zM384 256c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-32zM256 192c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32S224 78.3 224 96v64c0 17.7 14.3 32 32 32zM192 192c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7 14.3 32 32 32zM320 192c17.7 0 32-14.3 32-32V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7 14.3 32 32 32zM32 320c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM64 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 320c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM128 192h32c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM448 320c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-32zM32 416c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM256 448c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM384 448c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM192 448c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM448 96h32c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM384 128h32c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM160 256h32c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM480 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32h-32zM128 64c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-17.7-14.3-32-32-32zM64 160c-17.7 0-32 14.3-32 32s14.3 32 32 32h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM256 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32S224-14.3 224 0v32c0 17.7 14.3 32 32 32zM320 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM192 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM384 64c17.7 0 32-14.3 32-32V0c0-17.7-14.3-32-32-32s-32 14.3-32 32v32c0 17.7 14.3 32 32 32zM64 64c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-17.7-14.3-32-32-32zM448 64c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32V96c0-17.7-14.3-32-32-32zM256 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM192 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM320 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM384 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM128 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM64 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32zM448 128c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32s32-14.3 32-32v-32c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E");
+}
+
+
+/* Heading */
+form h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #ed7b09; /* Your vintage brown color */
+  letter-spacing: 1px;
+}
+
+/* Input fields */
+form input {
+  width: calc(100% - 30px); /* Adjust width for padding */
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+form input:focus {
+  border: 1px solid #ed7b09;
+  box-shadow: 0px 0px 6px rgba(237, 123, 9, 0.5);
+  outline: none;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #ed7b09;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+form button:hover {
+  background: #d96d07;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form {
+    margin: 30px;
+    padding: 20px;
+  }
+}
